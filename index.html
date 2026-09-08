@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TermuxVoid is a free, open-source security tool repository for Termux. Support the solo developer and help keep it alive, updated, and growing.">
+  <meta name="theme-color" content="#08090d">
+  <title>Support TermuxVoid — Keep the repo free and growing</title>
+  <link rel="icon" href="https://github.com/termuxvoid/repo/raw/main/img/termuxvoid_logo.png" type="image/png">
+  <meta property="og:title" content="Support TermuxVoid">
+  <meta property="og:description" content="TermuxVoid is free for everyone. Help the solo developer keep it alive, updated, and growing with more security tools.">
+  <meta property="og:image" content="https://github.com/termuxvoid/repo/raw/main/img/termuxvoid_logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://termuxvoid.github.io/support-me/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Martian+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== Masthead ========== -->
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="masthead__brand" href="#top">
+        <span class="mark"><img src="https://github.com/termuxvoid/repo/raw/main/img/termuxvoid_logo.png" alt="TermuxVoid Logo" loading="lazy"></span>
+        <span class="wordmark">Termux<em>Void</em></span>
+      </a>
+      <button class="masthead__menu" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <nav class="masthead__nav" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
+        <a href="#why">Why support</a>
+        <a href="#support">Support</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="masthead__cta" href="#support">Donate &nearr;</a>
+    </div>
+  </header>
+
+  <!-- ========== Hero ========== -->
+  <section class="cover" id="top">
+    <div class="cover__inner">
+      <div class="cover__spine reveal in">
+        <span class="ref">N&deg; TVD-2026 // UNOFFICIAL DISTRIBUTION</span>
+        <span class="status">STATUS: ACTIVE</span>
+      </div>
+
+      <h1 class="reveal in">TermuxVoid is <span class="accent">free</span>. Keep it <span class="accent--blue">that way</span>.</h1>
+
+      <p class="cover__lede reveal in">A solo-maintained, <strong>100% open source</strong> repository of security tools for Termux. Your support means more tools, faster fixes, and a repo that stays alive for everyone.<span class="code-badge">pkg install &lt;tool&gt;</span></p>
+
+      <div class="cover__actions reveal in">
+        <a class="btn btn--solid" href="#support">Support the developer <span class="arrow">&darr;</span></a>
+        <a class="btn btn--ghost" href="https://termuxvoid.github.io" target="_blank" rel="noopener">Visit the repo <span class="arrow">&nearr;</span></a>
+      </div>
+
+      <p class="cover__sync reveal in" id="syncLine">
+        <span class="dash">$</span>
+        <span>LATEST SYNC: <b id="syncStamp">&mdash;</b></span>
+        <span class="dash">|</span>
+        <span>TOOLS: <b id="syncTools">&mdash;</b></span>
+      </p>
+    </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to about">SCROLL<span class="stem"></span></a>
+  </section>
+
+  <main>
+
+    <!-- ========== About ========== -->
+    <section class="wrap section" id="about">
+      <div class="section-head reveal">
+        <h2><span class="secno">SEC 01</span> What is TermuxVoid?</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="reveal">
+          <p class="termline"><span class="prompt">$</span> echo "why does termuxvoid exist ?"</p>
+          <p><strong>TermuxVoid</strong> is an unofficial custom repository for Termux &mdash; extra security tools for ethical hacking, bug bounty, cyber security and reverse engineering that aren&rsquo;t in the official repositories. The same tools ship as both an <strong>APT (dpkg)</strong> and a <strong>Pacman</strong> repository, compiled natively for Android.</p>
+          <p>Every tool is built and maintained by <strong>one developer</strong>. No company, no funding, no paywall &mdash; just an open project for the security research community under the <a href="https://github.com/TermuxVoid/repo/blob/main/LICENSE" target="_blank" rel="noopener">BSD-3-Clause</a> license.</p>
+          <p>Keeping both repositories compiled, patched and served 24/7 costs real money and real time. <strong>That&rsquo;s where you come in.</strong></p>
+        </div>
+
+        <table class="stats-table reveal" aria-label="Repository statistics">
+          <tbody>
+            <tr>
+              <td class="f" scope="row">Tools available</td>
+              <td class="v live"><span id="toolCount">&mdash;</span> <span class="u">live</span></td>
+            </tr>
+            <tr>
+              <td class="f" scope="row">GitHub stars</td>
+              <td class="v live"><span id="starCount">&mdash;</span> <span class="u">live</span></td>
+            </tr>
+            <tr>
+              <td class="f" scope="row">Auto updates</td>
+              <td class="v">24/7 <span class="u">continuous</span></td>
+            </tr>
+            <tr>
+              <td class="f" scope="row">Open source</td>
+              <td class="v">100% <span class="u">BSD-3</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== Impact ========== -->
+    <section class="impact section" id="impact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span class="secno">SEC 02</span> The impact of your support</h2>
+          <p class="section__subtitle">Live numbers pulled straight from the repository &mdash; nothing hard-coded, nothing out of date.</p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat reveal" data-tag="LIVE">
+            <div class="stat__num live"><span id="toolCount2">&mdash;</span><span class="live-mark">&#9679;</span></div>
+            <div class="stat__label">Security tools shipped</div>
+            <div class="stat__sub">every one built for Android</div>
+          </div>
+          <div class="stat reveal" data-tag="LIVE">
+            <div class="stat__num live"><span id="starCount2">&mdash;</span><span class="live-mark">&#9733;</span></div>
+            <div class="stat__label">GitHub stars</div>
+            <div class="stat__sub">from the security community</div>
+          </div>
+          <div class="stat reveal" data-tag="LIVE">
+            <div class="stat__num live"><span id="forkCount2">&mdash;</span><span class="live-mark">&#9637;</span></div>
+            <div class="stat__label">Forks</div>
+            <div class="stat__sub">people building on it</div>
+          </div>
+          <div class="stat reveal" data-tag="STATIC">
+            <div class="stat__num"><span>24/7</span></div>
+            <div class="stat__label">Auto updates</div>
+            <div class="stat__sub">patches &amp; version bumps, on schedule</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why support ========== -->
+    <section class="wrap section" id="why">
+      <div class="section-head reveal">
+        <h2><span class="secno">SEC 03</span> Why support a free project?</h2>
+        <p class="section__subtitle">TermuxVoid will always be free. Support is what keeps it moving forward instead of just standing still.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-card__tag">[ 01 ]</div>
+          <h3>Build infrastructure</h3>
+          <p>Every tool is compiled natively for Android. Build machines, signing, and CI pipelines cost money to keep running 24/7.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card__tag">[ 02 ]</div>
+          <h3>Bandwidth &amp; hosting</h3>
+          <p>Serving two repositories &mdash; APT and Pacman &mdash; around the clock means real bandwidth bills for everyone who installs.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card__tag">[ 03 ]</div>
+          <h3>Developer time</h3>
+          <p>Security patches within 24 hours, version updates every week, new tool requests. All of that work is done by one person.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card__tag">[ 04 ]</div>
+          <h3>Motivation</h3>
+          <p>Support sends a clear signal: this work matters. It&rsquo;s what turns &ldquo;maintain it&rdquo; into &ldquo;add more tools.&rdquo;</p>
+        </div>
+      </div>
+
+      <div class="why-callout reveal">
+        <span class="sig">$ _</span>
+        <p>Your contribution goes straight back into the repo &mdash; more tools, faster fixes, and a project that keeps growing for everyone.</p>
+      </div>
+    </section>
+
+    <!-- ========== Support ========== -->
+    <section class="support section" id="support">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span class="secno">SEC 04</span> Support TermuxVoid</h2>
+          <p class="section__subtitle">No tiers, no subscriptions, no perks required. Any amount, any way you prefer &mdash; it all helps.</p>
+        </div>
+
+        <div class="support__lead reveal">
+          <div>
+            <h3>Help keep the repo <em>free and growing</em>.</h3>
+            <p>Every contribution covers infrastructure and buys back the developer&rsquo;s time to ship more tools. If you can&rsquo;t donate, a star, a share, or a bug report means just as much.</p>
+          </div>
+          <div class="primary-box">
+            <span class="pb-label">Most direct</span>
+            <p>Recurring or one-time support through GitHub Sponsors exits and goes straight to development.</p>
+            <a class="btn btn--solid" href="https://github.com/sponsors/termuxvoid" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12S5.7 23.5 12 23.5 23.5 18.3 23.5 12 18.3.5 12 .5zm0 4.2A4.3 4.3 0 0 1 16.3 9c0 1.1-.6 2.4-1.8 3.7-.7.8-1.6 1.6-2.5 2.6-.9-1-1.8-1.8-2.5-2.6C7.8 11.4 7.7 10.1 7.7 9A4.3 4.3 0 0 1 12 4.7zm0 15.1c-5.8 0-9.1-3.4-9.1-7.8 0-.7.1-1.4.3-2L6 13.3c.5.6 1.3 1 2.1 1h7.8c.8 0 1.6-.4 2.1-1l2.8-3.3c.2.6.3 1.3.3 2 0 4.4-3.3 7.8-9.1 7.8z"/></svg>
+              Sponsor on GitHub<span class="arrow">&nearr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="wallet-grid">
+          <div class="wallet reveal">
+            <div class="wallet__head">
+              <span class="wallet__name">USDT</span>
+              <span class="wallet__network">TRC20</span>
+            </div>
+            <div class="wallet__qr"><img src="" alt="USDT TRC20 wallet QR code" data-qr="TUhPRG5L52MLKqGWMaJzW7oX2RL59qfmZf" loading="lazy"></div>
+            <div class="wallet__body">
+              <code class="wallet__addr">TUhPRG5L52MLKqGWMaJzW7oX2RL59qfmZf</code>
+              <button class="wallet__copy" type="button" data-address="TUhPRG5L52MLKqGWMaJzW7oX2RL59qfmZf">Copy address</button>
+            </div>
+          </div>
+
+          <div class="wallet reveal">
+            <div class="wallet__head">
+              <span class="wallet__name">Bitcoin</span>
+              <span class="wallet__network">BTC</span>
+            </div>
+            <div class="wallet__qr"><img src="" alt="Bitcoin wallet QR code" data-qr="bc1qeqathzrqxx8gae8cqhvz2chnnfrxxyzrn83n2k" loading="lazy"></div>
+            <div class="wallet__body">
+              <code class="wallet__addr">bc1qeqathzrqxx8gae8cqhvz2chnnfrxxyzrn83n2k</code>
+              <button class="wallet__copy" type="button" data-address="bc1qeqathzrqxx8gae8cqhvz2chnnfrxxyzrn83n2k">Copy address</button>
+            </div>
+          </div>
+
+          <div class="wallet reveal">
+            <div class="wallet__head">
+              <span class="wallet__name">BNB</span>
+              <span class="wallet__network">BSC</span>
+            </div>
+            <div class="wallet__qr"><img src="" alt="BNB BSC wallet QR code" data-qr="0x45F7E4f2cd32916980230De1aBeC925c0eD87a24" loading="lazy"></div>
+            <div class="wallet__body">
+              <code class="wallet__addr">0x45F7E4f2cd32916980230De1aBeC925c0eD87a24</code>
+              <button class="wallet__copy" type="button" data-address="0x45F7E4f2cd32916980230De1aBeC925c0eD87a24">Copy address</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="support__note reveal"><span class="glyph">&#9888;</span> Crypto donations are non-refundable. Always verify the network before sending &mdash; sending USDT on the wrong network may result in permanent loss. Scan the QR code or copy the address directly.</p>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="wrap section" id="faq">
+      <div class="section-head reveal">
+        <h2><span class="secno">SEC 05</span> Questions people ask</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="note reveal">
+          <summary><span class="marker">+</span> Is TermuxVoid really free?</summary>
+          <div class="note__body">
+            <p>Yes. The repository and every tool in it are open source under the <a href="https://github.com/TermuxVoid/repo/blob/main/LICENSE" target="_blank" rel="noopener">BSD-3-Clause</a> license. It will always be free to install and use &mdash; support is optional and never required.</p>
+          </div>
+        </details>
+
+        <details class="note reveal">
+          <summary><span class="marker">+</span> Where does my money go?</summary>
+          <div class="note__body">
+            <p>Every contribution goes toward build infrastructure, hosting and bandwidth for both the APT and Pacman repositories, and compensating the developer&rsquo;s time. Nothing is hidden &mdash; it funds the repo directly.</p>
+          </div>
+        </details>
+
+        <details class="note reveal">
+          <summary><span class="marker">+</span> I can&rsquo;t donate. How else can I help?</summary>
+          <div class="note__body">
+            <ul>
+              <li>Star the <a href="https://github.com/TermuxVoid/repo" target="_blank" rel="noopener">repository</a></li>
+              <li>Share TermuxVoid with the community</li>
+              <li>Report broken packages on <a href="https://github.com/TermuxVoid/repo/issues" target="_blank" rel="noopener">GitHub Issues</a></li>
+              <li>Request tools you&rsquo;d like to see added</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="note reveal">
+          <summary><span class="marker">+</span> Do supporters get perks or priority?</summary>
+          <div class="note__body">
+            <p>No paywalled features &mdash; tool requests and bug reports are open to everyone. That&rsquo;s the deal: support is a thank-you, not a transaction. Supporters do get a personal thank-you and shout-outs in releases.</p>
+          </div>
+        </details>
+
+        <details class="note reveal">
+          <summary><span class="marker">+</span> How do I reach the developer?</summary>
+          <div class="note__body">
+            <p>Telegram <a href="https://t.me/nullxvoid" target="_blank" rel="noopener">@nullxvoid</a>, email <a href="mailto:termuxvoid@gmail.com">termuxvoid@gmail.com</a>, or <a href="https://github.com/TermuxVoid/repo/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== Colophon / Footer ========== -->
+  <footer class="colophon">
+    <div class="wrap">
+      <div class="colophon__grid">
+        <div>
+          <h3>TermuxVoid</h3>
+          <p>Security tools excluded from official Termux repos, plus custom builds. Built and maintained by one developer, free for everyone.</p>
+        </div>
+        <div>
+          <h3>Community</h3>
+          <ul>
+            <li><a href="https://t.me/nullxvoid" target="_blank" rel="noopener">Telegram &nearr;</a></li>
+            <li><a href="https://youtube.com/@alienkrishnorg" target="_blank" rel="noopener">YouTube &nearr;</a></li>
+            <li><a href="https://github.com/TermuxVoid" target="_blank" rel="noopener">GitHub org &nearr;</a></li>
+            <li><a href="mailto:termuxvoid@gmail.com">Email</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="https://termuxvoid.github.io" target="_blank" rel="noopener">Main site &nearr;</a></li>
+            <li><a href="https://github.com/termuxvoid/repo" target="_blank" rel="noopener">APT repo &nearr;</a></li>
+            <li><a href="https://github.com/termuxvoid/pacman-repo" target="_blank" rel="noopener">Pacman repo &nearr;</a></li>
+            <li><a href="https://github.com/TermuxVoid/repo/blob/main/LICENSE" target="_blank" rel="noopener">License &nearr;</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="colophon__credits">
+        <span>&copy; 2026 TermuxVoid</span>
+        <span>Maintained by <a href="https://github.com/Anon4You" target="_blank" rel="noopener">Alienkrishn</a></span>
+        <span>Numbers render live from the repository</span>
+        <span>Open source forever &middot; Free for everyone</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== Back to top ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <!-- ========== Scripts ========== -->
+  <script src="js/vendor/qrcode.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
   --ink: #e7ecf3;
   --ink-2: #b7c1d0;
   --muted: #94a0b6;
-  --faint: #5b677d;
+  --faint: #7b8799;
   --ok: #00ff41;
   --ok-deep: #06a832;
   --ok-soft: rgba(0, 255, 65, 0.08);
@@ -48,7 +48,10 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 1.5rem);
+  scroll-padding-top: calc(var(--header-height) + 1.5rem + env(safe-area-inset-top, 0px));
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -151,6 +154,7 @@ section {
   background: rgba(8, 9, 13, 0.82);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule-soft);
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .masthead__inner {
@@ -265,6 +269,7 @@ section {
   border: 1px solid var(--rule);
   color: var(--ink);
   padding: 0.5rem 0.9rem;
+  min-height: 44px;
 }
 
 @media (max-width: 820px) {
@@ -274,7 +279,7 @@ section {
 
   .masthead__nav {
     position: absolute;
-    top: var(--header-height);
+    top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
     left: 0;
     right: 0;
     background: var(--bg-soft);
@@ -435,8 +440,8 @@ section {
 
 /* --- Hero --- */
 .cover {
-  min-height: calc(100vh - var(--header-height));
-  min-height: calc(100svh - var(--header-height));
+  min-height: calc(100vh - var(--header-height) - env(safe-area-inset-top, 0px));
+  min-height: calc(100svh - var(--header-height) - env(safe-area-inset-top, 0px));
   display: flex;
   align-items: center;
   padding: clamp(4rem, 12vw, 6rem) 0;
@@ -570,7 +575,7 @@ section {
 /* Scroll cue */
 .scroll-cue {
   position: absolute;
-  bottom: 1.8rem;
+  bottom: calc(1.8rem + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-mono);
@@ -600,6 +605,11 @@ section {
   grid-template-columns: 1.4fr 1fr;
   gap: 2.5rem;
   align-items: start;
+  min-width: 0;
+}
+
+.about-grid > * {
+  min-width: 0;
 }
 
 @media (max-width: 820px) {
@@ -632,6 +642,7 @@ section {
   margin-bottom: 1.2rem;
   overflow-x: auto;
   white-space: nowrap;
+  max-width: 100%;
 }
 
 .termline .prompt {
@@ -915,7 +926,13 @@ section {
   gap: 1.3rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .wallet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
   .wallet-grid {
     grid-template-columns: 1fr;
   }
@@ -948,11 +965,11 @@ section {
 
 .wallet__network {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
   color: var(--faint);
   border: 1px solid var(--rule);
-  padding: 0.2rem 0.5rem;
+  padding: 0.22rem 0.5rem;
 }
 
 .wallet__qr {
@@ -1001,6 +1018,7 @@ section {
   background: transparent;
   border: 1px solid var(--ok);
   padding: 0.6rem 0.9rem;
+  min-height: 44px;
   font-weight: 700;
   transition: background 0.18s var(--ease-out), color 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out);
 }
@@ -1181,7 +1199,7 @@ section {
 .back-to-top {
   position: fixed;
   right: 1.4rem;
-  bottom: 1.4rem;
+  bottom: calc(1.4rem + env(safe-area-inset-bottom, 0px));
   width: 44px;
   height: 44px;
   display: grid;
@@ -1366,6 +1384,57 @@ section {
   }
 }
 
+/* Smallest phones (320px class) */
+@media (max-width: 340px) {
+  .masthead__brand {
+    gap: 0.45rem;
+  }
+
+  .mark {
+    width: 26px;
+    height: 26px;
+  }
+
+  .masthead__menu {
+    padding: 0.42rem 0.7rem;
+  }
+
+  .cover h1 {
+    font-size: clamp(1.45rem, 6.4vw, 1.9rem);
+  }
+
+  .cover__lede {
+    font-size: 1.05rem;
+  }
+
+  .code-badge {
+    font-size: 0.74rem;
+  }
+
+  .wallet__head {
+    padding: 0.9rem 1rem;
+  }
+
+  .wallet__addr {
+    font-size: 0.66rem;
+  }
+
+  .note__body {
+    padding: 0 1rem 1.05rem 2.2rem;
+  }
+}
+
+/* Very large screens (4K class) */
+@media (min-width: 1800px) {
+  body::before {
+    background-size: 32px 32px;
+  }
+
+  .stat__num {
+    font-size: clamp(2rem, 3vw, 3.4rem);
+  }
+}
+
 /* Touch screens: bigger hit targets */
 @media (pointer: coarse) {
   .btn {
@@ -1387,6 +1456,41 @@ section {
   .back-to-top {
     width: 50px;
     height: 50px;
+  }
+
+  .btn:active,
+  .wallet__copy:active,
+  .note summary:active,
+  .masthead__menu:active {
+    transform: scale(0.98);
+  }
+
+  .masthead__menu:active {
+    background: var(--raised);
+  }
+}
+
+/* Touch devices without hover: don't leave sticky hover glows behind */
+@media (hover: none) {
+  .masthead__cta:hover,
+  .masthead__nav-cta:hover,
+  .btn--solid:hover,
+  .wallet__copy:hover,
+  .wallet__copy.copied {
+    box-shadow: none;
+  }
+
+  .why-card:hover {
+    transform: none;
+    border-color: var(--rule);
+  }
+
+  .btn .arrow {
+    transform: none;
+  }
+
+  .back-to-top:hover {
+    box-shadow: none;
   }
 }
 
